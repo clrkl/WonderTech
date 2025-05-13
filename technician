@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Our Technicians | WonderTech</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<nav class="navbar">
+  <a href="index.html" class="logo-link">
+    <img src="logo.png" alt="WonderTech Logo" class="logo" />
+  </a>
+  <div class="nav-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="booking.html">Book Now</a>
+    <a href="technician.html">Technicians</a>
+  </div>
+</nav>
+
+
+  <div class="tech-list-container">
+    <h1>Our Technicians</h1>
+
+    <!-- Search box to filter technicians -->
+    <input
+      type="text"
+      id="search-tech"
+      class="search-tech"
+      placeholder="Search technicians..."
+      aria-label="Search technicians"
+    />
+
+    <ul class="tech-list" id="tech-list">
+      <li>Juan Dela Cruz</li>
+      <li>Maria Santos</li>
+      <li>Carlos Reyes</li>
+      <li>Anna Garcia</li>
+      <li>David Lee</li>
+      <li>Sophia Martinez</li>
+      <li>Michael Tan</li>
+      <li>Linda Nguyen</li>
+      <!-- Add more technicians here -->
+    </ul>
+
+    <a href="booking.html" class="back-link" aria-label="Go to booking form">Book Now</a>
+  </div>
+
+  <script>
+    // Simple filter functionality for technician list
+    const searchInput = document.getElementById('search-tech');
+    const techList = document.getElementById('tech-list');
+    const techItems = techList.getElementsByTagName('li');
+
+    searchInput.addEventListener('input', function () {
+      const filter = this.value.toLowerCase();
+      for (let i = 0; i < techItems.length; i++) {
+        const techName = techItems[i].textContent.toLowerCase();
+        techItems[i].style.display = techName.includes(filter) ? '' : 'none';
+      }
+    });
+  </script>
+</body>
+</html>
