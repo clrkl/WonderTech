@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Book a Repair | WonderTech</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -10,12 +10,15 @@
 <body>
   <!-- Navbar -->
   <nav class="navbar">
-    <img src="logo.png" alt="WonderTech Logo" class="logo" />
+    <a href="index.html" class="logo-link">
+      <img src="logo.png" alt="WonderTech Logo" class="logo" />
+    </a>
     <div class="nav-links">
-      <a href="index.html#about">About</a>
+      <a href="index.html" class="active">Home</a>
       <a href="index.html#services">Services</a>
       <a href="index.html#contact">Contact</a>
       <a href="booking.html">Book Now</a>
+      <a href="technician.html">Technicians</a>
     </div>
   </nav>
 
@@ -27,23 +30,27 @@
     <p class="booking-desc">
       Please fill out the form below to book your device repair. We’ll contact you to confirm the details.
     </p>
-<form class="booking-form"
-  action="https://formspree.io/f/myzwnyzz"
-  method="POST"
-  autocomplete="off"
->
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="email" name="email" placeholder="Your Email" required />
-  <input type="tel" name="phone" placeholder="Your Phone Number" required />
-  <input type="text" name="device" placeholder="Device (e.g., iPhone 12, Dell Laptop)" required />
-  <input type="text" name="issue" placeholder="What’s wrong? (e.g., cracked screen)" required />
-  <input type="date" name="date" required />
-  <input type="time" name="time" required />
-  <textarea name="address" placeholder="Your Address" required></textarea>
-  <button type="submit">Book Now</button>
-</form>
+    <form class="booking-form"
+      action="https://formspree.io/f/myzwnyzz"
+      method="POST"
+      autocomplete="off"
+    >
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="tel" name="phone" placeholder="Your Phone Number" required />
+      <input type="text" name="device" placeholder="Device (e.g., iPhone 12, Dell Laptop)" required />
+      <input type="text" name="issue" placeholder="What’s wrong? (e.g., cracked screen)" required />
+      
+      <!-- New Technician Name Input -->
+      <input type="text" name="technician" placeholder="Technician's Name (optional)" />
 
-    <div class="booking-confirmation" id="confirmationMessage">
+      <input type="date" name="date" required />
+      <input type="time" name="time" required />
+      <textarea name="address" placeholder="Your Address" required></textarea>
+      <button type="submit">Book Now</button>
+    </form>
+
+    <div class="booking-confirmation" id="confirmationMessage" style="display:none;">
       <h3>Thank You!</h3>
       <p>Your booking has been received. We'll contact you shortly to confirm your appointment.</p>
       <a href="index.html" class="cta-btn" style="margin-top:24px;">Back to Home</a>
