@@ -41,8 +41,18 @@
       <input type="text" name="device" placeholder="Device (e.g., iPhone 12, Dell Laptop)" required />
       <input type="text" name="issue" placeholder="What’s wrong? (e.g., cracked screen)" required />
       
-      <!-- New Technician Name Input -->
+      <!-- Technician Name Input -->
       <input type="text" name="technician" placeholder="Technician's Name (optional)" />
+
+      <!-- New Service Type Dropdown -->
+<select name="service_type" class="booking-form-input" required>
+  <option value="" disabled selected>Select Type of Service</option>
+  <option value="On-site Repair">On-site Repair</option>
+  <option value="Remote Help">Remote Help</option>
+  <option value="Pickup/Dropoff">Pickup/Dropoff</option>
+</select>
+
+
 
       <input type="date" name="date" required />
       <input type="time" name="time" required />
