@@ -619,3 +619,34 @@ body {
   width: auto;
   vertical-align: middle;
 }
+
+.booking-form-input {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  box-sizing: border-box;
+  appearance: none; /* Remove default arrow for better styling */
+  background: white url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%227%22%20viewBox%3D%220%200%2010%207%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M0%200l5%207%205-7z%22%20fill%3D%22%23333%22/%3E%3C/svg%3E") no-repeat right 12px center;
+  background-size: 10px 7px;
+  cursor: pointer;
+}
+
+.booking-form-input:focus {
+  border-color: #1976d2;
+  outline: none;
+  box-shadow: 0 0 8px rgba(25, 118, 210, 0.3);
+  background-color: #fff;
+}
+
+body.dark-mode .booking-form-input {
+  background-color: #333;
+  color: #eee;
+  border-color: #555;
+  background: #333 url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%227%22%20viewBox%3D%220%200%2010%207%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M0%200l5%207%205-7z%22%20fill%3D%22%23eee%22/%3E%3C/svg%3E") no-repeat right 12px center;
+  background-size: 10px 7px;
+}
